@@ -21,15 +21,7 @@
 4. Run 'go run main.go' to start the program
 
 ### API Endpoint Examples:
-1. POST /auth/register
-   ````
-   {
-   "username": "your_username",
-   "password": "your_password"
-   }
-   ````
-   
-2. POST /login 
+1. POST /login 
    ````
    {
    "username": "your_username",
@@ -51,3 +43,10 @@
    Authorization: Basic {your-token}
    ````
    
+5. POST /contacts/{id}/notes
+   ````
+   Authorization: Basic {your-token}
+   {
+   "note_text": "Your text"
+   }
+   ````
