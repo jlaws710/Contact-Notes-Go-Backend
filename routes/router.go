@@ -10,7 +10,6 @@ import (
 
 func SetupRoutes(r *gin.Engine) {
 	r.POST("/login", func(c *gin.Context) {
-		//c.JSON(200, gin.H{"token": "mock-token"})
 		token := util.GenerateToken()
 		util.StoreToken(token)
 		c.JSON(200, gin.H{"token": token})
